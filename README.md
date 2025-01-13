@@ -2,36 +2,15 @@
 
 This Git repository contains Terraform code to deploy AWS infrastructure for different work environments, such as dev, prod, and stg. It includes resources like EC2 instances, S3 buckets, and other infrastructure components. This README provides an overview of the project and instructions for deploying and managing the infrastructure.
 
-## Table of Contents
-
-1. [Prerequisites](#prerequisites)
-2. [Getting Started](#getting-started)
-3. [Project Structure](#project-structure)
-4. [Terraform Configuration](#terraform-configuration)
-5. [Deployment](#deployment)
-6. [Managing the Infrastructure](#managing-the-infrastructure)
-7. [Destroying the Infrastructure](#destroying-the-infrastructure)
-8. [Contributing](#contributing)
-9. [License](#license)
-
 ---
-
-## Prerequisites
-
-Before you begin, make sure you have the following prerequisites installed and configured:
-
-- [Terraform](https://www.terraform.io/downloads.html) (v1.0.0 or later)
-- [AWS CLI](https://aws.amazon.com/cli/) configured with valid credentials and a default region
-- Git (optional for cloning this repository)
-- AWS IAM User or Role with permissions to create EC2 instances, S3 buckets, and appropriate permissions for Terraform
 
 ## Getting Started
 
-1. Clone this Git repository (if you haven't already):
+1. Clone this Git repository
 
    ```shell
-   git clone https://github.com/your-username/terraform-environment-infrastructure.git
-   cd terraform-environment-infrastructure
+   git clone https://github.com/purveshsune/terraform-aws-infra.git
+   cd terraform-aws-infra
    ```
 
 2. Initialize the Terraform workspace:
@@ -45,21 +24,21 @@ Before you begin, make sure you have the following prerequisites installed and c
 The project structure is organized as follows:
 
 ```plaintext
-terraform-environment-infrastructure/
+terraform-aws-infra/
 ├── dev/
-│   ├── my_bucket.tf         # Terraform configuration for the dev environment
+│   ├── my_bucket.tf         # Terraform configuration for the dev env
 │   ├── my_server.tf
 │   ├── my_table.tf
 │   ├── variables.tf
 │   └── ...
 ├── prod/
-│   ├── my_bucket.tf         # Terraform configuration for the prod environment
+│   ├── my_bucket.tf         # Terraform configuration for the prod env
 │   ├── my_server.tf
 │   ├── my_table.tf
 │   ├── variables.tf
 │   └── ...
 ├── stg/
-│   ├── my_bucket.tf         # Terraform configuration for the stg environment
+│   ├── my_bucket.tf         # Terraform configuration for the stg env
 │   ├── my_server.tf
 │   ├── my_table.tf
 │   ├── variables.tf
@@ -109,4 +88,3 @@ terraform destroy
 
 Confirm the destruction of resources by entering `yes` when prompted.
 
-Thank you for using the Terraform AWS Environment Infrastructure project. If you have any questions or encounter any issues, please don't hesitate to reach out to the project maintainers.
